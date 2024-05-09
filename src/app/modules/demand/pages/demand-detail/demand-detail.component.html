@@ -1,0 +1,7 @@
+<app-back-button-page-container [backUrl]="'/demand'">
+  <ng-container *ngIf="demandDetail">
+    <p>{{ demandDetail.id }}</p>
+    <p>{{ demandDetail.title }}</p>
+  </ng-container>
+  <button mat-button (click)="onDeleteDemand()" color="error">Delete</button>
+</app-back-button-page-container>

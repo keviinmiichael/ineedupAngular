@@ -1,0 +1,25 @@
+<p class="text-center text-3xl">Login</p>
+<form
+  [formGroup]="loginForm"
+  (submit)="onLogin($event)"
+  class="flex flex-col w-96 mx-auto"
+>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="User" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      formControlName="password"
+      placeholder="User"
+      type="password"
+    />
+  </mat-form-field>
+  <button mat-button>Login</button>
+</form>
+
+<ng-container *ngIf="errorMessage">
+  <p class="text-center">{{ errorMessage }}</p>
+</ng-container>

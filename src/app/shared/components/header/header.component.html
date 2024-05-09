@@ -1,0 +1,9 @@
+<mat-toolbar class="flex items-center justify-end">
+  <ng-container *ngIf="user; else loginButton">
+    <p class="!m-0">{{ user.name }}</p>
+    <img class="h-8 w-8 ml-2" [src]="apiUrl + '/' + user.profile_picture" />
+  </ng-container>
+  <ng-template #loginButton>
+    <a [routerLink]="'/auth/login'"><button mat-button>Login</button></a>
+  </ng-template>
+</mat-toolbar>

@@ -1,0 +1,22 @@
+<app-back-button-page-container [backUrl]="'/demand'"
+  ><p class="text-center text-3xl">New Demand</p>
+  <form
+    [formGroup]="newDemandForm"
+    (submit)="onSubmit($event)"
+    class="flex flex-col w-96 mx-auto"
+  >
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" placeholder="Title" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description" placeholder="Description" />
+    </mat-form-field>
+    <div class="mb-2">
+      <mat-label>Files</mat-label>
+      <input formControlName="files" type="file" multiple />
+    </div>
+    <button mat-button>Create</button>
+  </form>
+</app-back-button-page-container>
